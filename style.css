@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lexend Peta", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  background: linear-gradient(rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)),
+    url("keyboardjpg.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.clock {
+  margin-top: -20px;
+  width: 275px;
+  height: 275px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 8px solid #eee;
+  border-radius: 50%;
+}
+
+.clock::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: #eddd15;
+  z-index: 10000;
+  border-radius: 50%;
+}
+
+.hour,
+.min,
+.sec {
+  position: absolute;
+}
+
+.hour,
+.hr {
+  width: 200px;
+  height: 145px;
+}
+
+.min,
+.mn {
+  width: 230px;
+  height: 190px;
+}
+
+.sec,
+.sc {
+  width: 250px;
+  height: 220px;
+}
+
+.hr,
+.mn,
+.sc {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+
+.hr::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 75px;
+  background-color: #ededed;
+}
+
+.mn::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 97px;
+  background-color: #ededed;
+}
+
+.sc::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 135px;
+  background-color: #eddd15;
+}
+
+#digitalClock {
+  display: flex;
+  color: #eee;
+  font-size: 4rem;
+  margin-top: 20px;
+}
